@@ -1,41 +1,39 @@
-# 🤖 Alpha Bot
-
-A powerful WhatsApp Multi-Device bot built for automation, group management, and fun ⚡
-
-<div align="center"> 
-  <img src="https://readme-typing-svg.demolab.com?font=Ribeye&size=50&pause=1000&color=00FFAA&center=true&width=910&height=100&lines=Alpha+Bot;Multi+Device+WhatsApp+Bot;Built+By+Alpha" />
-</div>
+# 🤖 Alpha Bot  
+A powerful WhatsApp Multi-Device bot built for automation, group management, and fun ⚡  
 
 ---
 
-## 👑 Owner
+## 👑 Owner  
 **Alpha**
 
 📱 WhatsApp: +263786641436  
 
 ---
 
-## 🔗 Official Links
+## 🔗 Official Links  
 
-- 📢 Channel: https://whatsapp.com/channel/0029VbCHc4kB4hdVt7JDX10a  
-- 💬 Support Group: https://chat.whatsapp.com/I4DcZPF0400CpnufO838YS?mode=gi_t  
+[![WhatsApp Channel](https://img.shields.io/badge/WhatsApp-Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://whatsapp.com/channel/0029VbCHc4kB4hdVt7JDX10a)
 
----
+[![WhatsApp Group](https://img.shields.io/badge/WhatsApp-Support%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/I4DcZPF0400CpnufO838YS?mode=gi_t)
 
-## ⚙️ Features
-
-- 🛡 Group moderation (ban, kick, mute, warn)
-- ⚡ Fast & lightweight performance
-- 🎮 Fun commands (games, jokes, trivia)
-- 🎵 Media downloader (YouTube, TikTok, etc.)
-- 🖼 Sticker maker with custom pack
-- 🤖 AI & automation features
-- 🔒 Anti-link & anti-spam system
+[![Chat Owner](https://img.shields.io/badge/Chat-Owner-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/263786641436)
 
 ---
 
-## 🚀 Deployment
+## ⚙️ Features  
 
-### 1. Install Dependencies
+- 🛡 Group moderation (ban, kick, mute, warn)  
+- ⚡ Fast & lightweight performance  
+- 🎮 Fun commands (games, jokes, trivia)  
+- 🎵 Media downloader (YouTube, TikTok, etc.)  
+- 🖼 Sticker maker with custom pack  
+- 🤖 AI & automation features  
+- 🔒 Anti-link & anti-spam system  
+
+---
+
+## 🚀 Deployment  
+
+### 1. Install Dependencies  
 ```bash
 npm install
