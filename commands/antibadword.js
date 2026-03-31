@@ -1,23 +1,34 @@
 const { handleAntiBadwordCommand } = require('../lib/antibadword');
-const isAdminHelper = require('../lib/isAdmin');
+const isAdmin = require('../lib/isAdmin');
 
-async function antibadwordCommand(sock, chatId, message, senderId, isSenderAdmin) {
-    try {
-        if (!isSenderAdmin) {
-            await sock.sendMessage(chatId, { text: '```For Group Admins Only!```' }, { quoted: message });
-            return;
+module.exports = {
+    name: "antibadword",
+    description: "Enable or configure anti bad words",
+
+    async execute(sock, msg, args) {
+        const chatId = msg.key.remoteJid;
+        const senderId = msg.key.participant || msg.key.remoteJid;
+
+        // Only allow in groups
+        if (!chatId.endsWith('@g.us')) {
+            return sock.sendMessage(chatId, {
+                text: "❌ This command works in groups only"
+            }, { quoted: msg });
         }
 
-        // Extract match from message
-        const text = message.message?.conversation || 
-                    message.message?.extendedTextMessage?.text || '';
-        const match = text.split(' ').slice(1).join(' ');
+        // Check admin status
+        const adminStatus = await isAdmin(sock, chatId, senderId);
 
-        await handleAntiBadwordCommand(sock, chatId, message, match);
-    } catch (error) {
-        console.error('Error in antibadword command:', error);
-        await sock.sendMessage(chatId, { text: '*Error processing antibadword command*' }, { quoted: message });
+        if (!adminStatus.isSenderAdmin) {
+            return sock.sendMessage(chatId, {
+                text: "❌ Admins only!"
+            }, { quoted: msg });
+        }
+
+        // Get arguments
+        const match = args.join(" ");
+
+        // Call main logic
+        await handleAntiBadwordCommand(sock, chatId, msg, match);
     }
-}
-
-module.exports = antibadwordCommand; 
+}; 
